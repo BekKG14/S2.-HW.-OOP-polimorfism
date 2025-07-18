@@ -4,6 +4,7 @@ import org.skypro.skyshop.search.Searchable;
 
 import java.util.Locale;
 
+
 public class SearchEngine {
     private Searchable[] searchables;
 
