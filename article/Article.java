@@ -18,7 +18,7 @@ public final class Article implements Searchable {
 
     @Override
     public String getSearchTerm() {
-        return toString();
+        return title + " " + text;
     }
 
     @Override
@@ -26,9 +26,6 @@ public final class Article implements Searchable {
         return "ARTICLE";
     }
 
-    @Override
-    public String getStringRepresentation() {
-        return Searchable.super.getStringRepresentation();
-    }
+
 
 }
