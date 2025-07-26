@@ -1,10 +1,13 @@
 package org.skypro.skyshop;
 
+import org.skypro.skyshop.article.Article;
 import org.skypro.skyshop.basket.ProductBasket;
 import org.skypro.skyshop.product.DiscountProduct;
 import org.skypro.skyshop.product.FixPriceProduct;
 import org.skypro.skyshop.product.Product;
 import org.skypro.skyshop.product.SimpleProduct;
+
+import java.util.Arrays;
 
 public class App {
     public static void main(String[] args) {
@@ -12,11 +15,18 @@ public class App {
         Product cucumber = new SimpleProduct("Cucumner", 110);
         Product vodka = new SimpleProduct("Vodka", 101);
         Product pivo = new SimpleProduct("Pivo", 80);
-        Product pivoCheep = new DiscountProduct("PivoLight", 29, 12);
+        Product pivoCheep = new DiscountProduct("Pivo Light", 29, 12);
         Product chlor = new FixPriceProduct("Chlor", 2313);
         Product cheetos = new DiscountProduct("Cheetos",109, 10 );
         Product maltesers = new FixPriceProduct("Maltesers", 129);
         Product coupon = new SimpleProduct("Netflix coupon", 499);
+
+
+
+
+        Article alcohol = new Article("Vodka premium!", "Is premium vodka good for your ? No vodka is bad anyway");
+        Article vegetables = new Article("Cucmber, or not cucumber? That is the question!", "Cucumber is good !");
+        Article discount = new Article("Discount is for poor?", "No it's not, now discount products are cheetos and Pivo Light");
 
         System.out.println(pivoCheep);
         System.out.println(cucumber);
@@ -58,6 +68,28 @@ public class App {
 
 
         System.out.println(basket.isSpecialCount());
+
+
+        SearchEngine searchBase = new SearchEngine(20);
+
+        searchBase.add(cucumber);
+        searchBase.add(pivo);
+        searchBase.add(pivoCheep);
+        searchBase.add(vodka);
+        searchBase.add(chlor);
+        searchBase.add(maltesers);
+        searchBase.add(cheetos);
+        searchBase.add(coupon);
+        searchBase.add(alcohol);
+        searchBase.add(vegetables);
+        searchBase.add(discount);
+
+
+        System.out.println(Arrays.toString(searchBase.search("Pivo")));
+        System.out.println(Arrays.toString(searchBase.search("Cheetos")));
+
+
+
     }
 
 }
