@@ -23,7 +23,6 @@ public class App {
 
 
 
-
         Article alcohol = new Article("Vodka premium!", "Is premium vodka good for your ? No vodka is bad anyway");
         Article vegetables = new Article("Cucmber, or not cucumber? That is the question!", "Cucumber is good !");
         Article discount = new Article("Discount is for poor?", "No it's not, now discount products are cheetos and Pivo Light");
@@ -89,7 +88,26 @@ public class App {
         System.out.println(Arrays.toString(searchBase.search("Cheetos")));
 
 
+        System.out.println("Ответ на задание 4");
 
+        try{
+            System.out.println(searchBase.searchBestResult("ffdxc"));
+        } catch (BestResultNotFound e) {
+            System.out.println(" Нет подходящих по запросу ");
+        }
+
+
+        try {
+            Product lolipop = new DiscountProduct("Lolipop", -1, 12);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Неверный номер");
+        }
+
+        try {
+            Product potato = new SimpleProduct(null, -11);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Неверные данные");
+        }
     }
 
 }
