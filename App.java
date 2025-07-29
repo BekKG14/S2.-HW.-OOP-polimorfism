@@ -93,7 +93,7 @@ public class App {
         try{
             System.out.println(searchBase.searchBestResult("Pivo"));
         } catch (BestResultNotFound e) {
-            System.out.println("Нет подходящих по запросу ");
+            System.out.println("Нет подходящих по запросу");
         }
 
 
