@@ -64,7 +64,7 @@ public class SearchEngine {
                 currentObject = i;
             }
         }
-        if (arr.length > 0) {
+        if (arr[currentObject] != null) {
             return arr[currentObject];
         } else {
             throw new BestResultNotFound("Нет подходящих по запросу " + substring);
