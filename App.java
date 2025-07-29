@@ -88,12 +88,12 @@ public class App {
         System.out.println(Arrays.toString(searchBase.search("Cheetos")));
 
 
-        System.out.println("ответ на задание 4");
+        System.out.println("Ответ на задание 4");
 
         try{
             System.out.println(searchBase.searchBestResult("ffdxc"));
         } catch (BestResultNotFound e) {
-            System.out.println("Произошла ошибка "  + e.getMessage());
+            System.out.println(" Нет подходящих по запросу ");
         }
 
 
