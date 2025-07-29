@@ -6,7 +6,6 @@ import org.skypro.skyshop.product.DiscountProduct;
 import org.skypro.skyshop.product.FixPriceProduct;
 import org.skypro.skyshop.product.Product;
 import org.skypro.skyshop.product.SimpleProduct;
-
 import java.util.Arrays;
 
 public class App {
