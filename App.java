@@ -10,7 +10,7 @@ import org.skypro.skyshop.product.SimpleProduct;
 import java.util.Arrays;
 
 public class App {
-    public static void main(String[] args) throws BestResultNotFound {
+    public static void main(String[] args) {
 
         Product cucumber = new SimpleProduct("Cucumner", 110);
         Product vodka = new SimpleProduct("Vodka", 101);
@@ -89,7 +89,12 @@ public class App {
 
 
         System.out.println("ответ на задание 4");
-        System.out.println(searchBase.searchBestResult("Pivo"));
+
+        try{
+            System.out.println(searchBase.searchBestResult("Pivo"));
+        } catch (BestResultNotFound e) {
+            System.out.println("Нет подходящих по запросу ");
+        }
 
 
         try {
