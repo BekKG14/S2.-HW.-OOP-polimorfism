@@ -1,6 +1,6 @@
 package org.skypro.skyshop;
 
-public class BestResultNotFound extends RuntimeException {
+public class BestResultNotFound extends Exception {
     private String name;
 
     public BestResultNotFound(String name) {

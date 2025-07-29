@@ -37,7 +37,7 @@ public class SearchEngine {
         return result;
     }
 
-    public Searchable searchBestResult(String substring) {
+    public Searchable searchBestResult(String substring) throws BestResultNotFound {
 
         int currentObject = 0;
         Searchable[] arr = search(substring);
